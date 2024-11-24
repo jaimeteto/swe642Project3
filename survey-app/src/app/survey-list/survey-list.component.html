@@ -1,0 +1,33 @@
+<div class="container my-5">
+    <h2 class="text-center mb-4">Survey List</h2>
+  
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Date of Survey</th>
+          <th>Recommendation</th>
+          <th>Liked Features</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let survey of surveys">
+          <td>{{ survey.id }}</td>
+          <td>{{ survey.firstName }} {{ survey.lastName }}</td>
+          <td>{{ survey.email }}</td>
+          <td>{{ survey.city }}</td>
+          <td>{{ survey.state }}</td>
+          <td>{{ survey.dateOfSurvey}}</td>
+          <td>{{ survey.recommendation }}</td>
+          <td>{{ survey.getLikedFeaturesArray().join(', ') }}</td>
+          <td>{{ survey.additionalComments }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
