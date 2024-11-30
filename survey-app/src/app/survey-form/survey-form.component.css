@@ -1,0 +1,11 @@
+/* Add a red border for invalid inputs */
+.is-invalid {
+    border: 2px solid red;
+    background-color: #fce4e4;
+  }
+  
+  /* Style for the error message text */
+  .error {
+    color: red;
+    font-size: 0.875rem;
+  }

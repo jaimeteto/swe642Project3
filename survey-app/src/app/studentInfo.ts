@@ -15,7 +15,7 @@ export class StudentSurvey {
     additionalComments?: string;
   
     constructor(
-      id: number,
+      id:number,
       firstName: string,
       lastName: string,
       email: string,
@@ -30,7 +30,7 @@ export class StudentSurvey {
       telephone?: string,
       additionalComments?: string
     ) {
-      this.id = id;
+      this.id = id
       this.firstName = firstName;
       this.lastName = lastName;
       this.streetAddress = streetAddress;

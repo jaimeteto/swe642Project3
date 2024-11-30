@@ -1,9 +1,9 @@
 <div class="container my-5">
   <h2 class="text-center mb-4">Student Survey Form</h2>
-  <form (ngSubmit)="submitForm()">
+  <form  #currentForm="ngForm"(ngSubmit)="submitForm(currentForm)" novalidate>
     <!-- First Name -->
     <div class="mb-3">
-      <label for="firstName" class="form-label">First Name:</label>
+      <label for="firstName" class="form-label" >First Name:</label>
       <input
         type="text"
         id="firstName"
@@ -12,6 +12,9 @@
         name="firstName"
         required
       />
+      <div *ngIf="currentForm.submitted && currentForm.controls['firstName']?.invalid">
+        <small class="error">First name is required.</small>
+      </div>
     </div>
 
     <!-- Last Name -->
@@ -25,6 +28,9 @@
         name="lastName"
         required
       />
+      <div *ngIf="currentForm.submitted && currentForm.controls['lastName']?.invalid">
+        <small class="error">Last name is required.</small>
+      </div>
     </div>
 
     <!-- Street Address -->
@@ -37,6 +43,9 @@
         [(ngModel)]="survey.streetAddress"
         name="streetAddress"
       />
+      <div *ngIf="currentForm.submitted && currentForm.controls['streetAddress']?.invalid">
+        <small class="error">Street Address is required.</small>
+      </div>
     </div>
 
     <!-- City -->
@@ -49,6 +58,9 @@
         [(ngModel)]="survey.city"
         name="city"
       />
+      <div *ngIf="currentForm.submitted && currentForm.controls['city']?.invalid">
+        <small class="error">city is required.</small>
+      </div>
     </div>
 
     <!-- State -->
@@ -61,6 +73,9 @@
         [(ngModel)]="survey.state"
         name="state"
       />
+      <div *ngIf="currentForm.submitted && currentForm.controls['state']?.invalid">
+        <small class="error">State is required.</small>
+      </div>
     </div>
 
     <!-- ZIP -->
@@ -98,6 +113,9 @@
         name="email"
         required
       />
+      <div *ngIf="currentForm.submitted && currentForm.controls['email']?.invalid">
+        <small class="error">email is required.</small>
+      </div>
     </div>
 
     <!-- Date of Survey -->
@@ -111,6 +129,9 @@
         name="dateOfSurvey"
         required
       />
+      <div *ngIf="currentForm.submitted && currentForm.controls['dateOfSurvey']?.invalid">
+        <small class="error">valid date is required.</small>
+      </div>
     </div>
 
     <!-- What did you like most about the campus? -->
@@ -158,6 +179,9 @@
           {{ option }}
         </option>
       </select>
+      <div *ngIf="currentForm.submitted && currentForm.controls['recommendation']?.invalid">
+        <small class="error">picking an option is required.</small>
+      </div>
     </div>
 
     <!-- Additional Comments -->
