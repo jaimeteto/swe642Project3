@@ -1,3 +1,5 @@
+/* Jaime Pena G01300925
+Srikitha kandra G01409182 */
 package com.example.surveyapp_backend.config;
 
 import org.springframework.context.annotation.Bean;
