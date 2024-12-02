@@ -1,3 +1,5 @@
+/* Jaime Pena G01300925
+Srikitha kandra G01409182 */
 import { Routes } from '@angular/router';
 import { SurveyFormComponent } from './survey-form/survey-form.component';
 import { HomeComponent } from './home/home.component';

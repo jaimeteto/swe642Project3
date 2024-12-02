@@ -1,3 +1,5 @@
+/* Jaime Pena G01300925
+Srikitha kandra G01409182 */
 import { Component, OnInit } from '@angular/core';
 import { StudentSurvey } from '../studentInfo';
 import { CommonModule } from '@angular/common';

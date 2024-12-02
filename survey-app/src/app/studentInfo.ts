@@ -1,3 +1,5 @@
+/* Jaime Pena G01300925
+Srikitha kandra G01409182 */
 export class StudentSurvey {
     id: number;
     firstName: string;
